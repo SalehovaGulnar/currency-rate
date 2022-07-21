@@ -25,5 +25,5 @@ Alternatively you can use the Spring Boot Gradle task like so: ./gradlew bootR
 
 **Browser URL**
 Open your browser at the following URL for Swagger UI (giving REST interface details):
-http://192.168.33.151:8080/swagger-ui.html
+http://localhost:8080/swagger-ui.html
 
