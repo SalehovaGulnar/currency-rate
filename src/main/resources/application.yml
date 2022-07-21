@@ -1,36 +1,10 @@
-#client:
-  #registration:
-    #name: app
 spring:
-  #security:
-    #oauth2:
-      #client:
-        #registration:
-          #app:
-            #client-id: client1
-            #client-secret: secret1
-            #authorization-grant-type: client_credentials
-            #scope: read
-            #token-uri: http://localhost:6060/oauth/token
-  #datasource:
-    #type: com.zaxxer.hikari.HikariDataSource
-    #url: 'jdbc:mysql://localhost:3306/...'
-    #username: 'gulnar'
-    #password: '12345'
-  #jpa:
-    #show-sql: true
-   # hibernate:
-      #ddl-auto: create
-
-#resource:
-  #server:
-    #url: https://www.cbar.az/currencies/25.05.2022.xml
   main:
     allow-bean-definition-overriding: true
   datasource:
-    url: 'jdbc:oracle:thin:@//192.168.0.103:1521/peakdb'
-    username: 'PEAKDBTEST'
-    password: 'AyzQmMhy23'
+    url: 'jdbc:oracle:thin:@//ip:1521/db'
+    username: 'username'
+    password: 'password'
     driver-class-name: oracle.jdbc.OracleDriver
     hikari:
       minimumIdle: 5
