@@ -18,7 +18,6 @@ spring:
     format-sql: true
     hibernate:
       ddl-auto: none
-    open-in-view: false
 
 cbar:
   url: 'https://www.cbar.az/currencies/'
