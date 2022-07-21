@@ -1,0 +1,56 @@
+#client:
+  #registration:
+    #name: app
+spring:
+  #security:
+    #oauth2:
+      #client:
+        #registration:
+          #app:
+            #client-id: client1
+            #client-secret: secret1
+            #authorization-grant-type: client_credentials
+            #scope: read
+            #token-uri: http://localhost:6060/oauth/token
+  #datasource:
+    #type: com.zaxxer.hikari.HikariDataSource
+    #url: 'jdbc:mysql://localhost:3306/...'
+    #username: 'gulnar'
+    #password: '12345'
+  #jpa:
+    #show-sql: true
+   # hibernate:
+      #ddl-auto: create
+
+#resource:
+  #server:
+    #url: https://www.cbar.az/currencies/25.05.2022.xml
+  main:
+    allow-bean-definition-overriding: true
+  datasource:
+    url: 'jdbc:oracle:thin:@//192.168.0.103:1521/peakdb'
+    username: 'PEAKDBTEST'
+    password: 'AyzQmMhy23'
+    driver-class-name: oracle.jdbc.OracleDriver
+    hikari:
+      minimumIdle: 5
+      maximumPoolSize: 20
+      idleTimeout: 30000
+      maxLifetime: 2000000
+      connectionTimeout: 30000
+  jpa:
+    database-platform: org.hibernate.dialect.Oracle10gDialect
+    show-sql: false
+    format-sql: true
+    hibernate:
+      ddl-auto: none
+    open-in-view: false
+
+cbar:
+  url: 'https://www.cbar.az/currencies/'
+
+auth:
+  username: user
+  password: 12345
+jwt:
+  secret-key: 'secret'

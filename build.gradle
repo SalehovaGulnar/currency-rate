@@ -1,0 +1,41 @@
+plugins {
+	id 'org.springframework.boot' version '2.7.1'
+	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+	id 'java'
+}
+
+group = 'com.umbrella'
+version = '0.0.1'
+sourceCompatibility = '11'
+
+configurations {
+	compileOnly {
+		extendsFrom annotationProcessor
+	}
+}
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation group: 'org.springframework.boot', name: 'spring-boot-starter-security', version: '2.7.1'
+	implementation 'junit:junit:4.13.1'
+	implementation group: 'io.jsonwebtoken', name: 'jjwt', version: '0.9.1'
+	implementation group: 'org.springframework.security.oauth', name: 'spring-security-oauth2', version: '2.0.2.RELEASE'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
+	testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
+	compileOnly 'org.projectlombok:lombok'
+	//runtimeOnly 'mysql:mysql-connector-java'
+	runtimeOnly 'com.oracle.database.jdbc:ojdbc8'
+	annotationProcessor 'org.projectlombok:lombok'
+	implementation group: 'io.springfox', name: 'springfox-swagger2', version: '2.8.0'
+	implementation group: 'io.springfox', name: 'springfox-swagger-ui', version: '2.8.0'
+}
+
+tasks.named('test') {
+	useJUnitPlatform()
+}

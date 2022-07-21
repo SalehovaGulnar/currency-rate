@@ -1,0 +1,36 @@
+databaseChangeLog:
+  - changeSet:
+      id: v-0.1-01
+      author: ghsalehova
+      changes:
+        - createTable:
+            tableName: currency_rate
+            columns:
+              - column:
+                  name: id
+                  type: Integer
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    primaryKeyName: currency_rate_pk
+                    nullable: false
+              - column:
+                  name: rateDate
+                  type: DATE
+                  constraints:
+                    nullable: false
+              - column:
+                  name: currencyCode
+                  type: VARCHAR(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: currencyName
+                  type: VARCHAR(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: rateValue
+                  type: VARCHAR(255)
+                  constraints:
+                    nullable: false
